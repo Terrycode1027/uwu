@@ -66,7 +66,8 @@ Flutter 使用 **Dart** 語言，語法類似 Java / C#
 **步驟 1：下載 Flutter SDK**
 
 打開git bash輸入:
-```
+
+```bash
 git clone -b stable https://github.com/flutter/flutter.git
 ```
 
