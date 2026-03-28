@@ -112,7 +112,7 @@ Android Studio 提供了 **Android SDK** 和 **模擬器**，是執行 Flutter A
 
  https://developer.android.com/studio
 
-下載並安裝（保持所有預設選項即可）。
+下載並安裝（保持所有預設選項即可）
 
 **步驟 2：完成初始設定精靈**
 
