@@ -1,6 +1,9 @@
 # Futter
 ---
+## 海底撈避雷
+\color **日本海底撈不要吃!!!!!!!!**
 
+---
 ##  目錄
 
 1. [Flutter 是什麼？](#1-flutter-是什麼)
@@ -62,7 +65,7 @@ Flutter 使用 **Dart** 語言，語法類似 Java / C#
 
 **步驟 1：下載 Flutter SDK**
 
-打開git bash輸入:git clone -b stable https://github.com/flutter/flutter.git
+打開git bash輸入: git clone -b stable https://github.com/flutter/flutter.git
 電腦就會自己去找Flutter官方發布的最新穩定版本並下載到當前資料夾。
 ```
 檔案位置通常在C:\User\flutter
@@ -70,6 +73,7 @@ Flutter 使用 **Dart** 語言，語法類似 Java / C#
 
 >  不要放在 `C:\Program Files\`（需要管理員權限，容易出問題）  
 >  不要放在含有中文或空白的路徑（例如 `C:\我的資料夾\flutter`）
+
 
 **步驟 2：設定環境變數（Path）**
 
@@ -109,8 +113,9 @@ Dart 3.x.x
 Android Studio 提供了 **Android SDK** 和 **模擬器**，是執行 Flutter Android App 的必要工具。
 
 **步驟 1：下載 Android Studio**
-
+```
  https://developer.android.com/studio
+```
 
 下載並安裝（保持所有預設選項即可）
 
@@ -150,28 +155,18 @@ flutter doctor --android-licenses
 3. 選擇系統映像（System Image）：選最新的 **API 版本**（帶有 `Recommended` 標籤），點「Download」下載後選取，點「Next」
 4. 點「Finish」完成建立
 
-**步驟 4：啟動模擬器**
-
-在裝置清單中，點選 ▶️ 啟動模擬器，等待它開機（第一次會比較慢）。
-
-> 💡 **小技巧：** 模擬器很吃效能。如果你有 Android 手機，可以用 USB 線連接電腦，開啟手機的「開發者模式」，這樣直接在真實手機上跑，速度更快！
+> 模擬器很吃效能。如果有 Android 手機，可以用 USB 線連接電腦，開啟手機的「開發者模式」，這樣直接在真實手機上跑，速度更快
 
 ---
 
-## 6. 安裝 VS Code（推薦編輯器）
+## 6. 設定 VS Code IDE 
 
-VS Code 輕量且好用，是開發 Flutter 最受歡迎的編輯器之一。
+**點選左邊的圖示(extension)**
+>方框框ㄉ那個
 
-**步驟 1：下載 VS Code**
-
-👉 https://code.visualstudio.com/
-
-**步驟 2：安裝 Flutter 擴充套件**
-
-1. 開啟 VS Code
-2. 按 `Ctrl + Shift + X`（macOS：`Cmd + Shift + X`）開啟擴充功能面板
-3. 搜尋「**Flutter**」
-4. 安裝 **Flutter**（由 Dart Code 開發）→ 它會自動一併安裝 **Dart** 套件
+1. 按 `Ctrl + Shift + X`（macOS：`Cmd + Shift + X`）開啟擴充功能面板
+2. 搜尋「**Flutter**」
+3. 安裝 **Flutter**（由 Dart Code 開發）→ 它會自動一併安裝 **Dart** 套件
 
 ---
 
@@ -179,7 +174,7 @@ VS Code 輕量且好用，是開發 Flutter 最受歡迎的編輯器之一。
 
 `flutter doctor` 是 Flutter 內建的環境診斷工具，會告訴你哪些東西設定好了、哪些還有問題。
 
-在終端機（Terminal）輸入：
+-- 在終端機（Terminal）輸入： --
 
 ```bash
 flutter doctor
@@ -201,15 +196,15 @@ Doctor summary (to see all details, run flutter doctor -v):
 
 | 符號 | 意思 |
 |------|------|
-| ✅ `[✓]` | 這個項目設定完成，沒問題 |
-| ⚠️ `[!]` | 有警告，建議修復但不一定影響運作 |
-| ❌ `[✗]` | 有錯誤，需要解決 |
+|  `[✓]` | 這個項目設定完成，沒問題 |
+|  `[!]` | 有警告，建議修復但不一定影響運作 |
+|  `[✗]` | 有錯誤，需要解決 |
 
 > 目標是讓 **Flutter、Android toolchain、Android Studio、VS Code** 都是 `[✓]`。
 
 ---
 
-## 8. 建立你的第一個專案
+## 8. 建立第一個專案
 
 ### 方法一：使用 VS Code（圖形介面）
 
@@ -237,23 +232,26 @@ cd my_first_app
 
 ## 9. 認識專案結構
 
-建立完成後，你會看到以下資料夾結構：
+建立完成後，你會看到左邊的資料夾結構長這樣：
+>給你看重點就好
 
 ```
-my_first_app/
+haha_piyanpiyan/
 │
 ├── android/          ← Android 平台的原生設定（通常不需要動）
 ├── ios/              ← iOS 平台的原生設定（Mac 才能用）
-├── lib/              ← ⭐ 你主要寫程式碼的地方！
-│   └── main.dart     ← ⭐ 程式的入口點，從這裡開始
+├── lib/              ←  ★你主要寫程式碼的地方！
+│   └── main.dart     ←  ★程式的入口點，從這裡開始
 ├── test/             ← 測試程式碼放這裡
-├── pubspec.yaml      ← ⭐ 專案設定檔，管理套件依賴
+├── pubspec.yaml      ←  ★專案設定檔，管理套件依賴
+├── pubspec.lock      ← 安裝套件時系統會詳細記錄下載套件的版本號與來源，盡量不要手動更改這個檔案
 └── README.md         ← 專案說明文件
 ```
 
 ### 最重要的檔案：`lib/main.dart`
 
-打開它，你會看到 Flutter 自動產生的示範程式碼。先別怕，我們一行一行來看關鍵部分：
+打開它，你會看到 Flutter 自動產生的示範程式碼。
+關鍵部分：
 
 ```dart
 // 匯入 Flutter UI 套件（必備）
@@ -276,9 +274,10 @@ class MyApp extends StatelessWidget {
 }
 ```
 
-> 💡 **觀念：** 在 Flutter 裡，畫面上的所有東西都叫做 **Widget（元件）**。
+>  **觀念：** 在 Flutter 裡，畫面上的所有東西都叫做 **Widget（元件）**。
 > 文字是 Widget、按鈕是 Widget、整個畫面也是 Widget。就像積木一樣，一層一層疊起來。
 
+>ㄏㄏ這一整段是AI寫的
 ---
 
 ## 10. 執行程式
@@ -293,7 +292,7 @@ sdk gphone64 x86 64 (android-x64)
 
 如果顯示「No Device」，請先啟動 Android 模擬器（參考第 5 節）。
 
-### 方法一：VS Code 執行（推薦）
+### 方法一：VS Code 執行
 
 按 `F5`，或點選選單 `Run` → `Start Debugging`
 
@@ -312,15 +311,14 @@ flutter run
 
 第一次編譯需要 1～3 分鐘，這是正常的。之後修改程式碼時，**Hot Reload** 功能會讓更新幾乎是即時的！
 
-### 你應該看到這個畫面 🎉
+### 你應該看到這個畫面 
 
-模擬器上會出現一個畫面，顯示「You have pushed the button this many times:」和一個計數器。點擊右下角的浮動按鈕，數字會增加！
+模擬器上會出現一個畫面，顯示「You have pushed the button this many times:」和一個計數器。點擊右下角的浮動按鈕，數字會增加
 
 ---
 
 ## 11. 修改你的第一行程式碼
 
-讓我們來改一個簡單的地方，感受 **Hot Reload** 的魔力！
 
 ### 修改標題文字
 
@@ -333,14 +331,14 @@ title: 'Flutter Demo Home Page',
 改成你想要的文字，例如：
 
 ```dart
-title: '我的第一個 App！',
+title: '哈摟我的',
 ```
 
 儲存檔案（`Ctrl + S`），然後：
 
-**Hot Reload（熱重載）：** 按 `r`（在執行中的終端機）或按 VS Code 工具列的 ⚡ 圖示
+**Hot Reload（熱重載）：** 按 `r`（在執行中的終端機）或按 VS Code 工具列的 閃電麥坤 圖示
 
-畫面幾乎立即更新，**不需要重新啟動 App**！
+畫面幾乎立即更新，**不需要重新啟動 App**
 
 ### 修改計數器顏色
 
@@ -360,11 +358,12 @@ floatingActionButton: FloatingActionButton(
 backgroundColor: Colors.red, // 改成紅色
 ```
 
-儲存，Hot Reload，按鈕變紅色了！
+儲存，Hot Reload，按鈕變紅色了
 
 ---
 
 ## 12. 常見錯誤與解決方式
+>以下為AI生成，有錯誤請罵AI
 
 ### ❌ `flutter` 指令找不到（not recognized）
 
@@ -437,34 +436,19 @@ flutter pub get
 
 ---
 
-## 13. 下一步學習資源
+## 13. 學習資源
+---
+本篇參考資料：[iT硬梆梆1](https://ithelp.ithome.com.tw/articles/10215158)、[iT硬梆梆1](https://ithelp.ithome.com.tw/articles/10294783?source=post_page-----64661160906f---------------------------------------)、[medium](https://medium.com/@w96284ps/flutter-app%E9%96%8B%E7%99%BC%E6%95%99%E5%AD%B8-%E4%B8%80-64661160906f)，如文章內有雷同純屬我抄襲。
+---
 
-恭喜你！🎊 你已經成功安裝並執行了你的第一個 Flutter App！
-
-以下是繼續學習的好資源：
-
-### 官方資源（英文）
-
+## 官方資料
 | 資源 | 連結 | 說明 |
 |------|------|------|
 | Flutter 官方文件 | https://docs.flutter.dev | 最完整的參考資料 |
-| Flutter Codelabs | https://docs.flutter.dev/codelabs | 互動式教學，適合初學者 |
+| Flutter Codelabs | https://docs.flutter.dev/codelabs | 互動式教學，適合初學者(AI是這樣說啦) |
 | Widget 目錄 | https://docs.flutter.dev/ui/widgets | 所有內建元件的說明 |
 | DartPad | https://dartpad.dev | 線上練習 Dart 語法，不需安裝 |
-
-### 建議學習路徑
-
-```
-第一週：熟悉 Dart 基本語法（變數、函式、類別）
-    ↓
-第二週：學習基本 Widget（Text、Column、Row、Container、Button）
-    ↓
-第三週：學習 StatefulWidget（讓畫面會動）
-    ↓
-第四週：學習頁面導航（Navigator）和 ListView
-    ↓
-之後：學習狀態管理（Provider 或 Riverpod）、連接 API
-```
+ 
 
 ### 快速參考：常用指令
 
@@ -481,8 +465,8 @@ flutter doctor               # 診斷環境
 
 ---
 
-> 🌟 **最後的鼓勵：** 學習 Flutter 初期可能會遇到很多環境問題，這是每個開發者都經歷過的！遇到問題先用 `flutter doctor` 診斷，再去 [Stack Overflow](https://stackoverflow.com) 或 [Flutter GitHub Issues](https://github.com/flutter/flutter/issues) 搜尋錯誤訊息，通常都能找到解答。加油！💪
+> 
 
 ---
 
-*文件版本：Flutter 3.x | 最後更新：2026 年 3 月*
+*文件版本：Flutter 3.41 | 最後更新：2026 年 3 月28日*
