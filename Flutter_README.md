@@ -66,13 +66,13 @@ Flutter 使用 **Dart** 語言，語法類似 Java / C#
 **步驟 1：下載 Flutter SDK**
 
 打開git bash輸入:
-   ```
-     git clone -b stable https://github.com/flutter/flutter.git
-   ```
+```
+git clone -b stable https://github.com/flutter/flutter.git
+```
+
 電腦就會自己去找Flutter官方發布的最新穩定版本並下載到當前資料夾。
-```
+
 檔案位置通常在C:\User\flutter
-```
 
 >  不要放在 `C:\Program Files\`（需要管理員權限，容易出問題）  
 >  不要放在含有中文或空白的路徑（例如 `C:\我的資料夾\flutter`）
