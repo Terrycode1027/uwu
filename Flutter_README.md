@@ -113,7 +113,7 @@ Dart 3.x.x
 Android Studio 提供了 **Android SDK** 和 **模擬器**，是執行 Flutter Android App 的必要工具。
 
 **步驟 1：下載 Android Studio**
-```
+```bash
  https://developer.android.com/studio
 ```
 
