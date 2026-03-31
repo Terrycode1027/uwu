@@ -148,9 +148,9 @@ flutter doctor --android-licenses
 
 **步驟 1：開啟 Android Studio**
 
-**步驟 2：前往 Virtual Device Manager**
+**步驟 2：前往 More Actions**
 
-點選選單 `Tools` → `Device Manager`（或 `AVD Manager`）
+點選選單 `More Actions` → `Virtual Device Manager`
 
 **步驟 3：建立新虛擬裝置**
 
